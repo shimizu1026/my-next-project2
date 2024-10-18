@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 
+
 type News = {
   id: string;
   title: string;
@@ -12,8 +13,7 @@ type News = {
 };
 
 const data: {
-  contents: News[];
-} = {
+  contents: News[] } = {
   contents: [
     {
       id: "1",
@@ -46,6 +46,7 @@ const data: {
 };
 
 export default function Home() {
+  const sliceData = data.contents.slice(0, 2);
   return (
     <>
       <section className={styles.top}>
@@ -54,7 +55,6 @@ export default function Home() {
           <p className={styles.description}>
             私たちは市場をリードしているグローバルテックカンパニーです。
           </p>
-          ;
         </div>
         <Image
           className={styles.bgimg}
@@ -64,11 +64,12 @@ export default function Home() {
           height={1200}
         />
       </section>
+
       <section className={styles.news}>
         <h2 className={styles.newsTitle}>News</h2>
         <ul>
-          {data.contents.map((article) => {
-            <li key={article.id} styleName={styles.list}>
+          {sliceData.map((article) => (
+            <li key={article.id} className={styles.list}>
               <div className={styles.link}>
                 <Image
                   className={styles.image}
@@ -78,12 +79,13 @@ export default function Home() {
                   height={630}
                 />
                 <dl className={styles.content}>
-                  <dSt className={styles.newsItemTitle}>
+                  <dt className={styles.newsItemTitle}>
                     <dd className={styles.meta}>
                       <span className={styles.tag}>
                         {article.category.name}
                       </span>
                       <span className={styles.date}>
+                        {article.category.name}
                         <Image
                           src="/clock.svg"
                           alt=""
@@ -94,11 +96,11 @@ export default function Home() {
                         {article.publishedAt}
                       </span>
                     </dd>
-                  </dSt>
+                  </dt>
                 </dl>
               </div>
-            </li>;
-          })}
+            </li>
+          ))}
         </ul>
       </section>
     </>
