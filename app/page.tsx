@@ -16,6 +16,7 @@ const data: {
         name: "更新情報",
       },
       publishedAt: "2023/05/19",
+      createdAt: "2023/05/19",
     },
     {
       id: "2",
@@ -33,6 +34,7 @@ const data: {
         name: "更新情報",
       },
       publishedAt: "2023/04/19",
+      createdAt: "2023/04/19",
     },
   ],
 };
