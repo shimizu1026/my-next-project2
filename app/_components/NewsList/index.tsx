@@ -19,7 +19,7 @@ export default function NewsList({ news }: Props) {
         <li key={article.id} className={styles.list}>
           <div className={styles.link}>
             <Image
-              className="image"
+              className={styles.image}
               src="/no-image.png"
               alt="No Image"
               width={1200}
