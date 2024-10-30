@@ -33,6 +33,7 @@
   justify-content: center;
   z-index: -1;
 }
+
 .news {
   position: relative;
   background-color: #fff;
@@ -50,12 +51,6 @@
   position: absolute;
   right: -40px;
   bottom: -40px;
-}
-
-@media (max-width: 1000px) {
-  .news {
-    width: calc(100%-160%);
-  }
 }
 
 @media (max-width: 640px) {
