@@ -1,5 +1,4 @@
 import styles from "./index.module.css";
-import Image from "next/image";
 
 type Props = {
   href: string;
